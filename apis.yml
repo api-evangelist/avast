@@ -1,7 +1,6 @@
 aid: avast
 name: Avast
-description: 'Avast is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Avast is a global cybersecurity company offering antivirus, VPN, and other security solutions for consumers and businesses. Founded in 1988, Avast provides free and premium products to protect devices from malware, phishing, and online threats, with a focus on user-friendly, AI-driven technology and a large user base worldwide.'
 url: https://raw.githubusercontent.com/api-evangelist/avast/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +11,11 @@ created: '2026-09-26'
 modified: '2026-09-26'
 tags:
 - Company
+- Cybersecurity
+- Antivirus
+- VPN
+- Consumer
+- Business
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +23,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/avast-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/avast-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/avast
+  url: https://www.avast.com
