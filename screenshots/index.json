@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "avast",
+    "captured_at": "2026-10-11T181503",
+    "source_url": "https://www.avast.com",
+    "source_type": "Website",
+    "file": "avast-2026-10-11T181503.png",
+    "bytes": 117786,
+    "capture": "playwright-local"
+  }
+]
