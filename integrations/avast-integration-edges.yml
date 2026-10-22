@@ -1,0 +1,120 @@
+edges:
+- partner_name: Common Criteria Portal (CCRA certified products)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.commoncriteriaportal.org/products/
+  category: Common Criteria (ISO/IEC 15408) product certification
+  contract_reference:
+    register: Common Criteria Portal certified products + archived certificates (commoncriteriaportal.org/products/certified_products.csv,
+      certified_products-archived.csv)
+    standard: ISO/IEC 15408 Common Criteria for Information Technology Security Evaluation (CCRA)
+    spec_file: null
+    role: cc-certified-manufacturer
+    registered_name: Avast Software, Inc.
+    matched_domain: avast.com
+    matched_by: domain
+    certified_products:
+    - product: Mobility
+      product_type: Mobility
+      standard: ISO/IEC 15408 Common Criteria for Information Technology Security Evaluation (CCRA)
+      lapsed: true
+      protection_profiles:
+      - PP_APP_V1.2
+      schemes:
+      - US
+    signal_note: 'certified_products = one entry per Common Criteria product CATEGORY held (highest EAL for that
+      category in partner_tier; a category held only among archived certificates is lapsed: true); certificate and
+      product counts are context, never counted'
+    detected_by: sweep-common-criteria-certified-products.py
+    detected: '2026-10-21'
+    identity: wikidata Q2247432 'Avast Software' P856 https://www.avast.com/about
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-common-criteria-certified-products.py
+  first_seen: '2026-10-21'
+- partner_name: NIAP Product Compliant List (US CCEVS)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.niap-ccevs.org/Product/PCL.cfm
+  category: NIAP Protection Profile conformance (US Common Criteria scheme)
+  contract_reference:
+    register: NIAP Product Compliant List (niap-ccevs.org/Product/PCL.cfm; public JSON /api/project/product/pcl_products_all/)
+    standard: NIAP-approved Protection Profiles under ISO/IEC 15408 Common Criteria for Information Technology Security
+      Evaluation (CCRA)
+    spec_file: null
+    role: niap-pcl-vendor
+    registered_name: Avast Software, Inc
+    matched_domain: avast.com
+    matched_by: domain
+    signal_note: 'certified_products = one entry per NIAP technology type with a Certified (current) or Archived
+      (lapsed: true) PCL product, Protection Profiles named; products In Progress are listing only (in_evaluation),
+      never certified; product counts are context, never counted'
+    detected_by: sweep-common-criteria-certified-products.py
+    detected: '2026-10-21'
+    certified_products:
+    - product: Application Software
+      product_type: Application Software
+      lapsed: true
+      standard: NIAP-approved Protection Profiles under ISO/IEC 15408 Common Criteria for Information Technology
+        Security Evaluation (CCRA)
+      protection_profiles:
+      - PP_APP_v1.2
+    identity: wikidata Q2247432 'Avast Software' P856 https://www.avast.com/about
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-common-criteria-certified-products.py
+  first_seen: '2026-10-21'
+- partner_name: Mozilla Firefox Add-ons (AMO)
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: firefox-add-ons
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://addons.mozilla.org/en-US/firefox/addon/avast-secureline-vpn/
+  app: Avast SecureLine VPN
+  listing_count: 3
+  category: browser extension (Firefox Add-ons)
+  partner_url: https://addons.mozilla.org/
+  contract_reference:
+    register: 'Firefox Add-ons (addons.mozilla.org public API v5 search: authors, homepage, support_url)'
+    spec_file: null
+    role: firefox-add-on-publisher
+    registered_name: AVAST Software
+    register_id: https://addons.mozilla.org/api/v5/addons/addon/avast-secureline-vpn/
+    matched_domain: avast.com
+    matched_by: domain
+    matched_name: AVAST Software
+    builder: publisher
+    signal_note: ONE edge per provider for the store; listing alone = participation. The AMO author name (builder
+      publisher) or homepage + support_url both on the provider's domain (builder domain-attested) identifies it;
+      extension / user counts are context, never counted. No Mozilla repo in all/*, so no platform-side edge exists
+      to mirror.
+    detected_by: sweep-browser-extension-stores.py
+    detected: '2026-10-21'
+  detected_by: sweep-browser-extension-stores.py
+  first_seen: '2026-10-21'
+  apps:
+  - Avast SecureLine VPN
+  - Avast Online Security & Privacy
+  - Avast SafePrice
+generated: '2026-10-21'
+method: searched
+source:
+- https://www.commoncriteriaportal.org/products/certified_products.csv
+- https://www.commoncriteriaportal.org/products/certified_products-archived.csv
+- https://www.niap-ccevs.org/Product/PCL.cfm
+checked:
+- https://www.commoncriteriaportal.org/products/certified_products-archived.csv
+- https://www.commoncriteriaportal.org/products/certified_products.csv
+- https://www.niap-ccevs.org/Product/PCL.cfm
+- https://addons.mozilla.org/api/v5/addons/addon/<slug>/
+- https://addons.mozilla.org/api/v5/addons/search/?type=extension&app=firefox
+- https://chromewebstore.google.com/sitemap
